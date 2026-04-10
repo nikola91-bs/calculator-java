@@ -1,0 +1,106 @@
+TEST RESULTS – Calculator Black Box Testing
+
+-----------------------------------------
+1. SIMPLE OPERATIONS
+-----------------------------------------
+
+INPUT: 4+5
+EXPECTED: 9
+ACTUAL: 9.0
+RESULT: OK
+
+INPUT: 10-3
+EXPECTED: 7
+ACTUAL: 7.0
+RESULT: OK
+
+INPUT: 6*7
+EXPECTED: 42
+ACTUAL: 42.0
+RESULT: OK
+
+INPUT: 20/4
+EXPECTED: 5
+ACTUAL: 5.0
+RESULT: OK
+
+-----------------------------------------
+2. OPERATION PRIORITY
+-----------------------------------------
+
+INPUT: 2+3*4
+EXPECTED: 14
+ACTUAL: 14.0
+RESULT: OK
+
+INPUT: 10/2+3
+EXPECTED: 8
+ACTUAL: 8.0
+RESULT: OK
+
+INPUT: 10-2*3
+EXPECTED: 4
+ACTUAL: 4.0
+RESULT: OK
+
+-----------------------------------------
+3. NEGATIVE NUMBERS
+-----------------------------------------
+
+INPUT: -5+3
+EXPECTED: -2
+ACTUAL: -2.0
+RESULT: OK
+
+INPUT: +5+3
+EXPECTED: 8
+ACTUAL: 8.0
+RESULT: OK
+
+INPUT: -5*-5
+EXPECTED: 25
+ACTUAL: -25.0
+RESULT: BUG – pogrešno računa negativno množenje
+
+-----------------------------------------
+4. INVALID INPUT
+-----------------------------------------
+
+INPUT: 4++5
+EXPECTED: ERROR
+ACTUAL: ERROR
+RESULT: OK
+
+INPUT: abc+5
+EXPECTED: ERROR
+ACTUAL: ERROR
+RESULT: OK
+
+INPUT: (prazan unos)
+EXPECTED: ERROR
+ACTUAL: PROGRAM CRASH (IndexOutOfBounds)
+RESULT: BUG – program ne obrađuje prazan unos
+
+INPUT: (razmak)
+EXPECTED: ERROR
+ACTUAL: ERROR
+RESULT: OK
+
+-----------------------------------------
+5. SPECIAL CASES
+-----------------------------------------
+
+INPUT: 5/0
+EXPECTED: Infinity
+ACTUAL: Infinity
+RESULT: OK
+
+INPUT: -5/0
+EXPECTED: -Infinity
+ACTUAL: -Infinity
+RESULT: OK
+
+INPUT: 0/0
+EXPECTED: NaN
+ACTUAL: NaN
+RESULT: OK
